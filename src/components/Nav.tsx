@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "./Logo";
 
 export default function Nav() {
   return (
@@ -6,11 +7,10 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="flex items-center gap-2 text-lg font-bold tracking-tight"
+          className="flex items-center gap-2.5 text-lg font-bold tracking-tight transition hover:opacity-90"
+          aria-label="가림토 홈으로"
         >
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-accent text-black font-black">
-            가
-          </span>
+          <Logo size={32} />
           <span className="text-gradient-gold">GARIMTO</span>
         </Link>
 
