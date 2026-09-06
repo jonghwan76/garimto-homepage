@@ -3,6 +3,12 @@ type LogoProps = {
   className?: string;
 };
 
+/**
+ * GARIMTO official logo — Concept A4 (Intersection).
+ * Serif "G" whose crossbar extends as a board grid line,
+ * with a small gold token at the intersection.
+ * Suggests baduk/chess/janggi without being genre-specific.
+ */
 export default function Logo({ size = 32, className }: LogoProps) {
   return (
     <svg
@@ -14,63 +20,58 @@ export default function Logo({ size = 32, className }: LogoProps) {
       aria-label="가림토 GARIMTO 로고"
     >
       <defs>
-        <linearGradient id="garimtoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient
+          id="garimto-logo-gold"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
           <stop offset="0%" stopColor="#f0cc7c" />
-          <stop offset="55%" stopColor="#dcb35c" />
           <stop offset="100%" stopColor="#a37d34" />
         </linearGradient>
-        <radialGradient id="garimtoStone" cx="35%" cy="30%" r="70%">
-          <stop offset="0%" stopColor="#3b3b3b" />
-          <stop offset="60%" stopColor="#111111" />
-          <stop offset="100%" stopColor="#000000" />
-        </radialGradient>
       </defs>
 
-      {/* Gold rounded badge */}
-      <rect
-        x="1.5"
-        y="1.5"
-        width="37"
-        height="37"
-        rx="10"
-        fill="url(#garimtoGold)"
+      {/* Dark rounded badge */}
+      <rect x="0" y="0" width="40" height="40" rx="10" fill="#0d0d0d" />
+
+      {/* Board grid — horizontal line through the G's crossbar */}
+      <line
+        x1="4"
+        y1="23"
+        x2="36"
+        y2="23"
+        stroke="#a37d34"
+        strokeWidth="0.8"
+        opacity="0.55"
+      />
+      {/* Board grid — vertical line */}
+      <line
+        x1="27"
+        y1="6"
+        x2="27"
+        y2="34"
+        stroke="#a37d34"
+        strokeWidth="0.8"
+        opacity="0.55"
       />
 
-      {/* Inner shadow rim */}
-      <rect
-        x="1.5"
-        y="1.5"
-        width="37"
-        height="37"
-        rx="10"
-        fill="none"
-        stroke="rgba(0,0,0,0.25)"
-        strokeWidth="1"
-      />
-
-      {/* Go board crosshair grid (intersection) */}
-      <g
-        stroke="#1a1206"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        opacity="0.65"
+      {/* Serif G */}
+      <text
+        x="19"
+        y="30"
+        fontFamily="Georgia, 'Times New Roman', serif"
+        fontSize="28"
+        fontWeight="700"
+        fill="url(#garimto-logo-gold)"
+        textAnchor="middle"
+        letterSpacing="-1"
       >
-        <line x1="8" y1="20" x2="32" y2="20" />
-        <line x1="20" y1="8" x2="20" y2="32" />
-      </g>
+        G
+      </text>
 
-      {/* Black stone on the intersection */}
-      <circle cx="20" cy="20" r="7" fill="url(#garimtoStone)" />
-
-      {/* Subtle glossy highlight */}
-      <ellipse
-        cx="17.8"
-        cy="17.5"
-        rx="2.2"
-        ry="1.4"
-        fill="#ffffff"
-        opacity="0.35"
-      />
+      {/* Token at the grid intersection */}
+      <circle cx="27" cy="23" r="1.8" fill="#f0cc7c" />
     </svg>
   );
 }
