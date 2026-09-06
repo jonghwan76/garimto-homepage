@@ -18,10 +18,10 @@ export default function Contact() {
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="mailto:hello@garimto.kr"
+            href="mailto:garimtop1976@gmail.com"
             className="group inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 font-bold text-black shadow-lg shadow-accent/20 transition hover:bg-accent-strong"
           >
-            hello@garimto.kr
+            garimtop1976@gmail.com
             <span className="transition-transform group-hover:translate-x-1">→</span>
           </a>
           <a

@@ -8,7 +8,7 @@ export default function Footer() {
           </span>
           <span>© {new Date().getFullYear()} GARIMTO. All rights reserved.</span>
         </div>
-        <div className="flex items-center gap-6 text-xs text-muted">
+        <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted">
           <a
             href="https://baduk.garimto.kr"
             target="_blank"
@@ -17,8 +17,14 @@ export default function Footer() {
           >
             baduk.garimto.kr
           </a>
-          <a href="mailto:hello@garimto.kr" className="hover:text-foreground">
-            hello@garimto.kr
+          <a
+            href="mailto:garimtop1976@gmail.com"
+            className="hover:text-foreground"
+          >
+            garimtop1976@gmail.com
+          </a>
+          <a href="/privacy" className="hover:text-foreground">
+            개인정보처리방침
           </a>
         </div>
       </div>
