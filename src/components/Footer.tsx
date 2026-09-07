@@ -1,11 +1,11 @@
+import Logo from "./Logo";
+
 export default function Footer() {
   return (
     <footer className="border-t border-border/60 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 md:flex-row">
-        <div className="flex items-center gap-2 text-sm text-muted">
-          <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-accent text-black text-xs font-black">
-            가
-          </span>
+        <div className="flex items-center gap-2.5 text-sm text-muted">
+          <Logo size={24} />
           <span>© {new Date().getFullYear()} GARIMTO. All rights reserved.</span>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted">
